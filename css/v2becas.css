@@ -1,0 +1,236 @@
+#sidebar1 {
+	font-family:'lato', sans-serif;
+	font-weight: 100;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: black;
+}
+
+#sidebar2:hover, #sidebar3:hover, #sidebar4:hover {
+	/*border: 1px black solid;*/
+	background-color: rgba(230, 230, 230, 0.9);
+}
+
+.ayuda {
+	font-family: 'crimson text', serif;
+	width: 100%;
+	font-size: 1em;
+}
+
+
+.navigation {
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#sidebar1, #sidebar2, #sidebar3, #sidebar4, #sidebar5 {
+	padding: 5px;
+}
+
+.navigation {
+	font-family: 'lato', sans-serif;
+	font-weight: 100;
+	position: fixed;
+	background: white;
+	width: 100%;
+	top:0px;
+	border-bottom: 1px solid #e2e2e2;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, .1);
+	}
+
+body {
+	width: 100%;
+	margin: auto;
+}
+
+#undergrad, #graduate, #undocumented {
+	padding-top: 100px;
+}
+
+
+   	#sidebar2, #sidebar3, #sidebar4, #sidebar5 {
+  		float: left;
+  		padding: 15px;
+  	}
+
+  	#sidebar1 {
+  		float: left;
+  		padding: 15px 15px 15px 15px;
+  	}
+
+  	.navigation {
+	font-family: 'lato', sans-serif;
+	font-size: 1.2em;
+	position: fixed;
+	background: white;
+	width: 100%;
+	top:0px;
+	border-bottom: 1px solid #e2e2e2;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, .1);
+	}
+
+	#undergrad, #graduate, #undocumented {
+		padding-top: 50px;
+	}
+
+	body {
+		width: 760px;
+	}
+
+	.ayuda {
+		margin: auto;
+	}
+	
+
+  }
+
+
+/* desktop / horizontal tablet */
+/*@media only screen and (min-width: 1024px) {*/
+
+	.navigation {
+		position: fixed;
+		z-index: 1000;
+		background: white;
+		width: 970px;
+		top: 0px;
+		border-bottom: 1px solid #e2e2e2;
+		box-shadow: 0 2px 2px -1px rgba(0, 0, 0, .1);
+	}
+
+	.highlight {
+		border-bottom: 7px solid rgba(230, 230, 230, 0.9);
+	}
+
+
+	body {
+		width: 970px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ayuda {
+		width: 970px;
+		/*margin-left: 10px;
+		margin-right: 10px;*/
+		background-color: #20A7DC;
+	}
+
+	#undergrad, #graduate, #undocumented {
+		padding-top: 50px;
+	}
+
+	.info {
+		padding: 12px 10px;
+		border-right: 5px solid rgba(230, 230, 230, 0.9); 
+		height: 30px;
+		border-top: 1px solid rgba(230, 230, 230, 0.9);
+		-webkit-transition: opacity .5s, border .5s;
+		width: 180px;
+		color: rgba(230, 230, 230, 0.9);
+	}
+
+		.info:checked, .info:hover, .info:active, .info:visited {
+			/*background-color: rgba(230, 230, 230, 0.9);*/
+			color: black;
+			border-right: 5px solid transparent;
+			cursor: pointer;
+		}
+
+		.info:hover, .info:active, #step1:checked, #step1:active, #step1:visited {
+			border-right: transparent;
+		}
+
+		h5 {
+			display: none;
+		}
+
+	#PSAT, #apply, #fafsa {
+		display: none;
+		position: absolute;
+		width: 500px;
+		top: 180px;
+		left: 500px;
+		z-index: 100;
+	}
+
+		#PSAT p, #apply p, #fafsa p {
+			clear: both;
+		}
+
+		em {
+			font-size: 18em;
+			position: absolute;
+			top: -123px;
+			left: -50px;
+			color: #E0EEE0;
+			z-index: -100;
+		}
+
+		#apply em {
+			font-size: 18em;
+			color: #BDA0CB;
+		}
+
+		#fafsa em {
+			left:-100px;
+			font-size: 18em;
+			color: #87CEEB;
+		}
+
+#quote {
+	font-family: 'crimson text', serif;
+	position: absolute;
+	font-size: 2em;
+	left: 550px;
+	width: 500px;
+}
+
+#caption {
+	font-family: 'lato', sans-serif;
+	color: gray;
+	width: 200px;
+	font-size: .8em;
+	position: relative;
+	left: 740px;
+	top: -140px;
+}
+	#caption a {
+		color: gray;
+		text-decoration: underline;
+	}
+
+	#caption a:hover {
+		color: #87CEEB;
+	}
+
+#howto {
+	position: absolute;
+	left: 810px;
+	top: 500px;
+	font-family: 'lato', sans-serif;
+}
+
+.states a {
+	text-decoration: none;
+	color: #87CEEB;
+}
+	.states a:hover {
+		color:#87CEEB;
+		text-decoration: underline;
+	}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+}

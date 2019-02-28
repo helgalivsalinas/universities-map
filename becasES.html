@@ -1,0 +1,3702 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="uft-8">
+		<title>Especial Escolar: El Cielo es el L&iacute;mite</title>
+
+		<!--JS-->
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/waypoints.min.js"></script>
+		<script type="text/javascript" src="js/raphael.js"></script>
+		<script type="text/javascript" src="js/jquery.usmap.js"></script>
+		<script type="text/javascript" src="js/ESbecas.js"></script>
+		<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+		<script type="text/javascript" src="js/jquery.isotope.js"></script>
+		<!--<script type="text/javascript" src="js/waypoints.js"></script>-->
+		<!--end of JS-->
+
+		<!--css-->
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://s0.uvnimg.com/files/2013/09/15307/style.css" type="text/css" media="screen"/>
+		<link href="css/v2becas.css" rel="stylesheet" type="text/css">
+		<!--end of css-->
+
+		<style>
+
+		h1 {
+			font-family: 'roboto condensed', sans-serif;
+			font-size: 700;
+			color: #e6e4de;
+		}
+
+		h3, .numbers {
+			font-weight: bold;
+		}
+
+		ul {
+			list-style-type: none;
+		}
+
+			ul a {
+				color: black;
+				text-decoration: none;
+			}
+
+			ul a:hover {
+				color:#87CEEB;
+			}
+
+		li {
+			display: inline;
+			/*padding: 5px;*/
+		}
+
+		#all {
+			font-style: uppercase;
+		}
+
+		.isotope-item {
+  		z-index: 2;
+		}
+
+		.isotope-hidden.isotope-item {
+  		pointer-events: none;
+  		z-index: 1;
+		}
+
+		.isotope,
+		.isotope .isotope-item {
+		  -webkit-transition-duration: 0.8s;
+			 -moz-transition-duration: 0.8s;
+			  -ms-transition-duration: 0.8s;
+			   -o-transition-duration: 0.8s;
+				  transition-duration: 0.8s;
+		}
+
+		.isotope {
+		  -webkit-transition-property: height, width;
+			 -moz-transition-property: height, width;
+			  -ms-transition-property: height, width;
+			   -o-transition-property: height, width;
+				  transition-property: height, width;
+		}
+
+		.isotope .isotope-item {
+		  -webkit-transition-property: -webkit-transform, opacity;
+			 -moz-transition-property:    -moz-transform, opacity;
+			  -ms-transition-property:     -ms-transform, opacity;
+			   -o-transition-property:      -o-transform, opacity;
+				  transition-property:         transform, opacity;
+		}
+
+		#container {
+		  margin-left: 25px;
+		}
+
+		.college {
+		  font-family: 'Lato', sans-serif;
+		  font-weight: 300;
+		  width: 300px;
+		  height: 300px;
+		  float: left;
+		  overflow: hidden;
+		  position: relative;
+		  /*background: #888;*/
+		  color: white;
+		  /*-webkit-border-top-right-radius: 1.2em;
+			  -moz-border-radius-topright: 1.2em;
+				  border-top-right-radius: 1.2em;*/
+		}
+
+		h2, h3, p {
+			margin: 5px;
+		}
+
+		.college.public  { border: #2a2c2b solid 1px; /*border: hsl(   0, 100%, 50%) 1px solid;*/}
+		.college.private  { border: #2a2c2b solid 1px; /*border: hsl(  36, 100%, 50%) 1px solid;*/ }
+		.college.us { border: #2a2c2b solid 1px; /*border: hsl(  36, 100%, 50%) 1px solid;*/ }
+		.college {background-color: #2a2c2b;}
+
+		.college {
+			margin: 2px;
+		}
+
+		.aid, .contact {
+			font-family: 'Roboto-Condensed', sans-serif;
+			font-weight: 300;
+			margin-left: 25px;
+		}
+			.name {
+				font-family: 'Roboto-Condensed', sans-serif;
+				font-weight: 300;
+				margin-left: 25px;
+				margin-top: 20px;
+			}
+
+			.contact {
+				color: gray;
+				margin-left: 5px;
+				margin-left: 25px;
+				font-size: .8em;
+			}
+
+				.contact a, .aid a, #next-2 a {
+					text-decoration: none;
+					color: #87CEEB;
+				}
+
+					.contact a:hover, .aid a:hover, #next-2 a:hover {
+						text-decoration: underline;
+					}
+
+					.schools a {
+						color: #87CEEB;
+						text-decoration: none;
+					}
+
+					.schools a:hover {
+						text-decoration: underline;
+					}
+
+					#claremont a {
+						color: #87CEEB;
+						text-decoration: none;
+					}
+
+					#claremont a:hover {
+						text-decoration: underline;
+					}
+
+		.text {
+			margin-left: 30%;
+			margin-right: 10%;
+			line-height: 1.5em;
+		}
+
+		.text p {
+			margin-top: 0em;
+			margin-bottom: 3em;
+		}
+
+		.navigation img {
+			float:left;
+			padding-left: 5px;
+			padding-top: 5px;
+		}
+
+		.emphasis {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-style: bold;
+			font-size: 4.1em;
+		}
+
+		.first {
+			padding-top: 50px;
+		}
+
+		.Poblaci&oacute;n {
+			float: left;
+			padding-right: 20px;
+			padding-left: 20px;
+			padding-bottom: 20px;
+		}
+
+			.person {
+				float: left;
+				padding-left: 10px;
+				padding-top: 10px;
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 300;
+
+			}
+
+			#mini {
+				float: left;
+			}
+
+			#main {
+				padding-top: 5px;
+			}
+
+			.caption {
+				width: 550px;
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 300;
+			}
+
+			.proflie {
+				float: left;
+				font-weight: 300;
+				color: gray;
+			}
+
+				.proflie p {
+					font-family: 'Roboto Condensed', sans-serif;
+					font-weight: 100px;
+				}
+
+		#clicked-state {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 1em;
+			/*width: 370px;
+			left:720px;
+			top: 430px;*/
+		}
+
+		#map {
+			padding-top: 50px;
+			padding-left: 80px;
+			margin-left: 110px;		
+		}
+
+		.state {
+			display: none;
+		}
+
+		.line1, .line2, .line3, .line4 {
+			padding: 0px;
+			font-size: .7em;
+			width: 250px;
+			margin-left: 25px;
+		}
+
+			.line1, .line3 {
+				color: #F15826;
+				border-top: 1px gray solid;
+				border-bottom: 1px gray solid;
+				padding-top: 5px;
+				padding-bottom: 8px;
+			}
+
+			.line2 {
+				margin-bottom: 40px;
+			}
+
+			.line1 li {
+				margin-right: 20px;
+				margin-left: 0px;
+				padding-left: 0px;
+			}
+
+			.line3 li {
+				margin-right: 28px;
+				margin-left: 0px;
+			}
+
+			.line2 li {
+				margin-right: 49px;
+				margin-left: 0px;
+				padding: 0px;
+			}
+
+
+			.line4 li {
+				margin-right: 38px;
+				margin-left: 0px;
+				padding-left: 0px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="ayuda">
+
+			<!--Chapter_1-->
+
+			<div id="undergrad">
+
+				<!--100 best universities-->
+
+
+				<div id="interactive">
+
+					<h1 style="font-size: 5em; text-align: center; margin: 0px;">Las Mejores Escuelas</h1>
+					
+					<div id="map" style="height: 500px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px;"></div>
+
+					<div id="clicked-state">
+					<section id="options" class="clearfix">
+
+					<ul id="filters" class="option-set clearfix" data-option-key="filter" data-filter-group="region" style="padding:0px; display:none;">
+					<li>State:</li>
+					<li><a href="#filter" data-option-value=".louisiana">Louisiana</a></li>
+					<li><a href="#filter" data-option-value=".georgia">Georgia</a></li>
+					<li><a href="#filter" data-option-value=".kentucky">Kentucky</a></li>
+					<li><a href="#filter" data-option-value=".florida">Florida</a></li>
+					<li><a href="#filter" data-option-value=".wisconsin">Wisconsin</a></li>
+					<li><a href="#filter" data-option-value=".oregon">Oregon</a></li>
+					<li><a href="#filter" data-option-value=".iowa">Iowa</a></li>
+					<li><a href="#filter" data-option-value=".missouri">Missouri</a></li>
+					<li><a href="#filter" data-option-value=".washington">Washington</a></li>
+					<li><a href="#filter" data-option-value=".ohio">Ohio</a></li>
+					<li><a href="#filter" data-option-value=".minnesota">Minnesota</a></li>
+					<li><a href="#filter" data-option-value=".vermont">Vermont</a></li>
+					<li><a href="#filter" data-option-value=".tennessee">Tennessee</a></li>
+					<li><a href="#filter" data-option-value=".texas">Texas</a></li>
+					<li><a href="#filter" data-option-value=".colorado">Colorado</a></li>
+					<li><a href="#filter" data-option-value=".michigan">Michigan</a></li>
+					<li><a href="#filter" data-option-value=".maryland">Maryland</a></li>
+					<li><a href="#filter" data-option-value=".dc">DC</a></li>
+					<li><a href="#filter" data-option-value=".indiana">Indiana</a></li>
+					<li><a href="#filter" data-option-value=".virginia">Virginia</a></li>
+					<li><a href="#filter" data-option-value=".maine">Maine</a></li>
+					<li><a href="#filter" data-option-value=".north-carolina">North Carolina</a></li>
+					<li><a href="#filter" data-option-value=".new-hampshire">New Hampshire</a></li>
+					<li><a href="#filter" data-option-value=".illinois">Illinois</a></li>
+					<li><a href="#filter" data-option-value=".rhode-island">Rhode Island</a></li>
+					<li><a href="#filter" data-option-value=".connecticut">Connecticut</a></li>
+					<li><a href="#filter" data-option-value=".pennsylvania">Pennsylvania</a></li>
+					<li><a href="#filter" data-option-value=".massachusetts">Massachusetts</a></li>
+					<li><a href="#filter" data-option-value=".new-york">New York</a></li>
+					<li><a href="#filter" data-option-value=".new-jersey">New Jersey</a></li>
+					<li><a href="#filter" data-option-value=".california">California</a></li>
+					<li id="all"><a href="#filter" data-option-value="*" class="selected">Show All</a></li>
+					</ul>
+
+					</div><!--end of clicked state div-->
+				</div>
+
+				<!--<p>Download <a href="http://www.fafsa.ed.gov/fotw1314/pdf/Deadlines.pdf" target="_blank">PDF</a>. Source: <a href="http://www.fafsa.gov" target="_blank">fafsa.gov</a></p>-->
+
+				<div id="where" style="font-family:'roboto condensed', sans-serif; font-weight: 700; font-size: 4.2em; padding-left: 20px; padding-bottom: 20px; color: white; margin-left: 20px;"></div>
+
+
+				 <div id="container" class="clearfix">
+
+					<div class="college california private">
+					  <p class="state">California</p>
+					  <h2 class="name">Stanford University</h2>
+						<ul class="line1">
+							<li class="weight">Poblaci&oacute;n<br/> estudiantil</li>
+							<li class="makeup">% Hispano </li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+						</ul>
+
+						<ul class="line2">
+							<li class="numbers">19,945</li>
+							<li class="numbers">17%</li>
+							<li class="numbers">$58,846</li>
+						</ul>
+
+					  <h3 class="aid"><a href="http://www.stanford.edu/dept/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  	<ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$5,985</li> 
+							<li class="numbers">$9,563</li>
+							<li class="numbers">$29, 907</li>
+						</ul>
+
+					  <h4 class="contact">Email: financialaid@stanford.edu</h4>
+					</div>
+
+					<div class="college new-jersey private">
+					  <p class="state">New Jersey</p>
+					  <h2 class="name">Princeton University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+					  	<li class="numbers">7,813</li>
+						<li class="numbers">8% </li>
+					  	<li class="numbers">$54,780</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.princeton.edu/admission/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					   <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$5,995</li>
+							<li class="numbers">$2,658</li>
+							<li class="numbers">$31,339</li>
+						</ul>
+					  <h4 class="contact">Email: faoffice@princeton.edu</h4>
+					</div>
+
+					<div class="college connecticut private">
+					  <p class="state">Connecticut</p>
+					  <h2 class="name">Yale University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+					  	<li class="numbers">7,813</li>
+						<li class="numbers">10% </li>
+					  	<li class="numbers">$59,320</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.yale.edu/sfas/finaid/index.html" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+					  	<li class="numbers">$5,190</li>
+					  	<li class="numbers">$4,377</li>
+					  	<li class="numbers">$33,019</li>
+					  </ul>
+
+					  <h4 class="contact">Contact them <a herf="https://www.sis.yale.edu/sfas/sfs/contactus/index.html" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Columbia University</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+					  	<li class="numbers">26,050</li>
+						<li class="numbers">13% </li>
+					    <li class="numbers">$61, 540</li>	
+					  </ul>
+
+					  <h3 class="aid"><a href="http://cc-seas.financialaid.columbia.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+					  <ul class="line4">
+					  	<li class="numbers">$5,562</li>
+					  	<li class="numbers">$3,951</li>
+					  	<li clas="numbers">$31,215</li>
+					  </ul>
+						
+					  <h4 class="contact">Email: ugrad-finaid@columbia.edu</h4>
+					</div>
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name">Swarthmore College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">1,545</li>
+						<li class="makeup">13% </li>
+					    <li class="cost">$58,481</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.swarthmore.edu/admissions-and-aid.xml" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$4,694</li>
+						<li class="numbers">$2,317</li>
+						<li class="numbers">$30,514</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@swarthmore.edu</h4>
+					</div>
+
+					<div class="college new-york us">
+					  <p class="state">New York</p>
+					  <h2 class="name">U.S. Military Academy</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">4,624</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">N/A</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.usma.edu/admissions/SitePages/Admissions%20Team%202.aspx" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">N/A</li>
+							<li class="numbers">N/A</li>
+							<li class="numbers">N/A</li>
+					  </ul>
+
+					  <h4 class="contact">Email: admissions@usma.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Harvard University</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">27,392</li>
+						<li class="numbers">8% </li>
+					    <li class="cost">$57,050</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.fao.fas.harvard.edu/icb/icb.do" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$4,750</li> 
+						<li class="numbers">$2,481</li>
+						<li class="numbers">$34,302</li>
+					  </ul>
+
+					  <h4 class="contact">Contact them <a href="http://isites.harvard.edu/fs/docs/icb.topic551531.files/webforms/Prospective_Webform.html" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Williams College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,126</li>
+						<li class="numbers">10% </li>
+					  	<li class="numbers">$59,412</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://finaid.williams.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$5,310</li>
+						<li class="numbers">$2,187</li>
+						<li class="numbers">$35,645</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@williams.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">MIT</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">10,894</li>
+						<li class="numbers">14% </li>
+					    <li class="numbers">$57,010</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://web.mit.edu/sfs/financial_aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$7,080</li>
+						<li class="numbers">$2,273</li>
+						<li class="numbers">$30,383</li>
+					  </ul>
+
+					  <h4 class="contact">Email: sfs@mit.edu</h4>
+					</div>
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name" style="font-size: 1em;">University of Pennsylvania</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">24,832</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$59,600</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.sfs.upenn.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$7,188</li>
+						<li class="numbers">$2,916</li>
+						<li class="numbers">$28,062</li>
+					  </ul>
+
+					  <h4 class="contact">Email: sfsmail@exchange.upenn.edu</h4>
+					</div>
+
+					<div class="college rhode-island private">
+					  <p class="state">Rhode Island</p>
+					  <h2 class="name">Brown University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">8,768</li>
+						<li class="numbers">10% </li>
+					    <li class="numbers"> $58,140</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.brown.edu/about/administration/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+					  	<li class="numbers">$4,464</li>
+					  	<li class="numbers">$1,078</li>
+					  	<li class="numbers">$29,598</li>
+					  </ul>
+						
+					  <h4 class="contact">Email: Financial_Aid@brown.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Amherst College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,791</li>
+						<li class="numbers">11% </li>
+					    <li class="numbers">$59,060</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="https://www.amherst.edu/offices/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+					  	<li class="numbers">$4,717</li>
+					  	<li class="numbers">$2,012</li>
+					  	<li class="numbers">$3,365</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@amherst.edu</h4>
+					</div>
+
+					<div class="college illinois private">
+					  <p class="state">Illinois</p>
+					  <h2 class="name">University of Chicago</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">14,979</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$62,425</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://collegeaid.uchicago.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$6,368</li>
+							<li class="numbers">$4,626</li>
+							<li class="numbers">$25,969</li>
+					   </ul>
+
+					  <h4 class="contact">Email: college-aid@uchicago.edu</h4>
+					</div>
+
+					<div class="college north-carolina private">
+					  <p class="state">North Carolina</p>
+					  <h2 class="name">Duke University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">15,427</li>
+						<li class="numbers">7% </li>
+					    <li class="numbers">$59,528</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://dukefinancialaid.duke.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					 <ul class="line4">
+						<li class="numbers">$9,377</li>
+						<li class="numbers">$2,323</li>
+						<li class="numbers">$29,712</li>
+					 </ul>
+
+					  <h4 class="contact">Email: finaid@duke.edu</h4>
+					</div>
+
+					<div class="college new-hampshire private">
+					  <p class="state">New Hampshire</p>
+					  <h2 class="name">Dartmouth College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">6,144</li>
+						<li class="numbers">7% </li>
+					    <li class="numbers">$61,398</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.dartmouth.edu/~finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$5,719</li>
+						<li class="numbers">$830</li>
+						<li class="numbers">$31,549</li>
+					  </ul>
+
+					  <h4 class="contact">Email: Financial.Aid@Dartmouth.edu</h4>
+					</div>
+
+					<div class="college illinois private">
+					  <p class="state">Illinois</p>
+					  <h2 class="name">Northwestern University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">20,959</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$60,840</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://undergradaid.northwestern.edu/" target="_blank">Ayuda Financiera</a></h3>
+					   <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$7,409</li>
+							<li class="numbers">$4,568</li>
+							<li class="numbers">$22,353</li>
+						</ul>
+					  <h4 class="contact">Email: undergradaid@u.northwestern.edu</h4>
+					</div>
+
+					<div class="college california private">
+					  <p class="state">California</p>
+					  <h2 class="name" style="font-size: 1em;">California Institute of Technology</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,231</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$56,382</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.finaid.caltech.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$6,662</li>
+						<li class="numbers">$3,769</li>
+						<li class="numbers">$24,987</li>
+					   </ul>
+
+					  <h4 class="contact">Email: finaid@caltech.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Cornell University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+					  	<li class="numbers">21,131</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">$59,591</li>
+					  </ul>
+					
+					  <h3 class="aid"><a href="http://www.finaid.cornell.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$6,332</li> 
+						<li class="numbers">$2,350</li>
+						<li class="numbers">$24,685</li>
+					   </ul>
+
+					  <h4 class="contact">Email: finaid@cornell.edu</h4>
+					</div>
+
+					<div class="college maine private">
+					  <p class="state">Maine</p>
+					  <h2 class="name">Bowdoin College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,778</li>
+						<li class="numbers">12% </li>
+					    <li class="cost">$58,200</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.bowdoin.edu/Poblaci&oacute;naid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$6,630</li>
+						<li class="numbers">$916</li>
+						<li class="numbers">$28,641</li>
+					   </ul>
+					  <h4 class="contact">Email: sao@bowdoin.edu</h4>
+					</div>
+
+					<div class="college virginia private">
+					  <p class="state">Virginia</p>
+					  <h2 class="name" style="font-size:1em;">Washington and Lee University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,193</li>
+						<li class="number">3% </li>
+					    <li class="cost">$56,616</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www2.wlu.edu/x55995.xml" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,052</li>
+							<li class="numbers">$3,058</li>
+							<li class="numbers">$34,003</li>
+					   </ul>
+
+					  <h4 class="contact">Email: financialaid@wlu.edu</h4>
+					</div>
+
+					<div class="college california public">
+					  <p class="state">California</p>
+					  <h2 class="name">UC Berkeley</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">36,137</li>
+						<li class="numbers">12% </li>
+					    <li class="numbers">$55,766</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://Poblaci&oacute;ns.berkeley.edu/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+						<li class="numbers">$4,486</li>
+						<li class="numbers">$3,954</li>
+						<li class="numbers">$8,176</li>
+					   </ul>
+					  <h4 class="contact">Contact Info <a href="http://Poblaci&oacute;ns.berkeley.edu/finaid/home/contact_us.htm" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Wellesley College</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,502</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">$55,766</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.wellesley.edu/admission/finaid" target="_blank">Ayuda Financiera</a></h3>
+					   <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$5,687</li>
+					  		<li class="numbers">$3,336</li>
+							<li class="numbers">$31,339</li>
+						</ul>
+					  <h4 class="contact">Email: finaid@nd.edu</h4>
+					</div>
+
+					<div class="college indiana private">
+					  <p class="state">Indiana</p>
+					  <h2 class="name">University of Notre Dame</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">12,004</li>
+						<li class="makeup">9% </li>
+					    <li class="cost"> $57,805</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://admissions.nd.edu/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$9,889</li> 
+						<li class="numbers">$3,375</li>
+						<li class="numbers">$24,082</li>
+					   </ul>
+					  <h4 class="contact">Email: sfs@wellesley.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Tufts University</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">10,777</li>
+						<li class="numbers">7% </li>
+					    <li class="numbers">$58,800</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://uss.tufts.edu/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$6,421</li> 
+						<li class="numbers">$3,830</li>
+						<li class="numbers">$25,236</li>
+					  </ul>
+
+					  <h4 class="contact">Email: Poblaci&oacute;nservices@ase.tufts.edu</h4>
+					</div>
+
+					<div class="college dc private">
+					  <p class="state">District of Columbia</p>
+					  <h2 class="name">Georgetown University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">17,130</li>
+						<li class="numbers">7% </li>
+					    <li class="numbers">$59,900</li>
+					 </ul>
+					  <h3 class="aid"><a href="http://finaid.georgetown.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$4,665</li>
+						<li class="numbers">$862</li>
+						<li class="numbers">$26,248</li>
+					  </ul>
+
+					  <h4 class="contact">Contact info <a href="http://finaid.georgetown.edu/contact-us/" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Vassar College</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,386</li>
+						<li class="numbers">10% </li>
+					    <li class="cost">$59,320</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://admissions.vassar.edu/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					   <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$5,476</li>
+							<li class="numbers">$2,827</li>
+							<li class="numbers">$30,050</li>
+						</ul>
+					  <h4 class="contact">Email: finaid@vassar.edu</h4>
+					</div>
+
+					<div class="college maryland us">
+					  <p class="state">Maryland</p>
+					  <h2 class="name">U.S. Naval Academy</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers"> 4,576</li>
+						<li class="numbers">12% </li>
+					    <li class="cost"> N/A</li>
+					  </ul>		
+
+					  <h3 class="aid"><a href="http://www.usna.edu/Admissions/index.htm" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					 <ul class="line4">
+							<li class="numbers">N/A</li>
+							<li class="numbers">N/A</li>
+							<li class="numbers">N/A</li>
+					  </ul>
+					</div>
+
+					<div class="college virginia public">
+					  <p class="state">Virginia</p>
+					  <h2 class="name">University of Virginia</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">24,297</li>
+						<li class="numbers">5% </li>
+					    <li class="numbers">$51,337</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.virginia.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,315</li>
+							<li class="numbers">$5,932</li>
+							<li class="numbers">$11,483</li>
+					   </ul>
+
+					  <h4 class="contact">Email: faid@virginia.edu</h4>
+					</div>
+
+					<div class="college michigan public">
+					  <p class="state">Michigan</p>
+					  <h2 class="name" style="font-size:1em;">University of Michigan, Ann Arbor</h2>
+					   <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">42,716</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$51,976</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.finaid.umich.edu/Home.aspx" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,058</li>
+							<li class="numbers">$1,295</li>
+							<li class="numbers">$9,433</li>
+					   </ul>
+
+					  <h4 class="contact">Email: financial.aid@umich.edu</h4>
+					</div>
+
+					<div class="college colorado us">
+					  <p class="state">Colorado</p>
+					  <h2 class="name">U.S. Air Force Academy</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">4,413</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">N/A</li>
+					  </ul>
+					  <h3 class="aid"><a href="http://www.academyadmissions.com/" target="_blank">Ayuda Financiera</a></h3>
+					   <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">N/A</li>
+							<li class="numbers">N/A</li>
+							<li class="numbers">N/A</li>
+					   </ul>
+					  <h4 class="contact"></h4>
+					</div>
+
+					<div class="college north-carolina private">
+					  <p class="state">North Carolina</p>
+					  <h2 class="name">Davidson College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,755</li>
+						<li class="numbers">5% </li>
+					    <li class="numbers">$54,930</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.davidson.edu/admission-and-financial-aid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,381</li>
+							<li class="numbers">$3,810</li>
+							<li class="numbers">$24,067</li>
+					   </ul>
+
+					  <h4 class="contact">Email: financial.aid@umich.edu</h4>
+					</div>
+
+					<div class="college texas private">
+					  <p class="state">Texas</p>
+					  <h2 class="name">Rice University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">6,224</li>
+						<li class="makeup">13% </li>
+					    <li class="cost">$52,242</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://financialaid.rice.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+						    <li class="numbers">$4,048</li>
+							<li class="numbers">$3,677</li>
+							<li class="numbers">$23,917</li>
+					   </ul>
+					  <h4 class="contact">Email: fina@rice.edu</h4>
+					</div>
+
+					<div class="college california public">
+					  <p class="state">California</p>
+					  <h2 class="name">UCLA</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">39,271</li>
+						<li class="makeup">17% </li>
+					    <li class="cost">$54,810</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.fao.ucla.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,536</li>
+							<li class="numbers">$4,816</li>
+							<li class="numbers">$8,311</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@saonet.ucla.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Boston College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						 <li class="numbers">14,754</li>
+						 <li class="numbers">9% </li>
+					     <li class="numbers">$58,686</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.bc.edu/offices/stserv/financial/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$6,714</li>
+							<li class="numbers">$2,553</li>
+							<li class="numbers">$26,835</li>
+					   </ul>
+					  <h4 class="contact">Email: Poblaci&oacute;nservices@bc.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Colgate University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,964</li>
+						<li class="numbers">8% </li>
+					    <li class="cost">$57,745</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.colgate.edu/admission-financial-aid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$2,547</li>
+							<li class="numbers">$2,062</li>
+							<li class="numbers">$31,953</li>
+					   </ul>
+
+					  <h4 class="contact">Email: finaid@colgate.edu</h4>
+					</div>
+
+					<div class="college tennessee private">
+					  <p class="state">Tennessee</p>
+					  <h2 class="name">Vanderbilt University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">12,836</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$59,890</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.vanderbilt.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,462</li>
+							<li class="numbers">$5,485</li>
+							<li class="numbers">$30,464</li>
+					   </ul>
+
+					  <h4 class="contact">Email: finaid@vanderbilt.edu</h4>
+					</div>
+	
+					<div class="college north-carolina public">
+					  <p class="state">North Carolina</p>
+					  <h2 class="name">UNC Chapel Hill</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">29,137</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">$43,847</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://Poblaci&oacute;naid.unc.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,121</li>
+							<li class="numbers">$4,481</li>
+							<li class="numbers">$6,729</li>
+					  </ul>
+
+					  <h4 class="contact">Contact form <a href="http://Poblaci&oacute;naid.unc.edu/contact-2/ask-the-experts/" blank="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college connecticut private">
+					  <p class="state">Connecticut</p>
+					  <h2 class="name">Wesleyan University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">3,202</li>
+						<li class="numbers">10% </li>
+					    <li class="numbers">$61,167</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.wesleyan.edu/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$7,169</li>
+							<li class="numbers">$2,245</li>
+							<li class="numbers">$29,114</li>
+					   </ul>
+
+					  <h4 class="contact">Email: finaid@wesleyan.edu</h4>
+					</div>  
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name">Bryn Mawr College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,785</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">$57,586</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.brynmawr.edu/sfs/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$5,155</li>
+							<li class="numbers">$1,853</li>
+							<li class="numbers">$26,138</li>
+						</ul>
+
+					  <h4 class="contact">Email: sfs@brynmawr.edu</h4>
+					</div>     
+
+					<div class="college vermont private">
+					  <p class="state">Vermont</p>
+					  <h2 class="name">Middlebury College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,507</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$59,200</li>
+					  </ul>
+					  <h3 class="aid"><a href="http://www.middlebury.edu/admissions/finaid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,999</li>
+							<li class="numbers">$1,593</li>
+							<li class="numbers">$30,978</li>
+					   </ul>
+
+					  <h4 class="contact">Email: Poblaci&oacute;nfinancialservices@middlebury.edu</h4>
+					</div> 
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name" style="font-size:1em;">Carnegie Mellon University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">11,531</li>
+						<li class="numbers">7% </li>
+					    <li class="numbers">$59,710</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.cmu.edu/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,950</li>
+							<li class="numbers">$2,641</li>
+							<li class="numbers">$21,129</li>
+					   </ul>
+
+					  <h4 class="contact">Email: thehub@andrew.cmu.edu</h4>
+					</div> 
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name">Haverford College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,198</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$59,654</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.haverford.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$4,176</li>
+						<li class="numbers">$3,094</li>
+						<li class="numbers">$30,614</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@haverford.edu</h4>
+					</div> 
+
+					<div class="college virginia public">
+					  <p class="state">Virginia</p>
+					  <h2 class="name" style="font-size:1em;">College of William and Mary</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">8,200</li>
+						<li class="makeup">8% </li>
+					    <li class="cost">$49,712</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.wm.edu/admission/financialaid/index.php" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,173</li>
+							<li class="numbers">$6,783</li>
+							<li class="numbers">$11,310</li>
+					   </ul>
+
+					  <h4 class="contact">Email: aid@wm.edu</h4>
+					</div> 
+
+					<div class="college minnesota private">
+					  <p class="state">Minnesota</p>
+					  <h2 class="name">Carleton College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,018</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$58,275</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://apps.carleton.edu/campus/sfs/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,837</li>
+							<li class="numbers">$3,928</li>
+							<li class="numbers">$23,442</li>
+					   </ul>
+
+					  <h4 class="contact">Email: financialaid@carleton.edu</h4>
+					</div> 
+
+					<div class="college maryland private">
+					  <p class="state">Maryland</p>
+					  <h2 class="name" style="font-size: 1.3em;">Johns Hopkins University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">20,996</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$58,980</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.jhu.edu/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,027</li>
+							<li class="numbers">$3,537</li>
+							<li class="numbers">$25,724</li>
+					  </ul>
+
+					  <h4 class="contact">Email: fin_aid@jhu.edu</h4>
+					</div> 
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Hamilton College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,864</li>
+						<li class="numbers">6% </li>
+					    <li class="cost">$57,420</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.hamilton.edu/finaid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$5,491</li>
+							<li class="numbers">$2,629</li>
+							<li class="numbers">$27,912</li>
+					   </ul>
+
+					  <h4 class="contact">Email: finaid@hamilton.edu</h4>
+					</div> 
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name">Lafayette College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,478</li>
+						<li class="numbers">5% </li>
+					    <li class="numbers">$57,688</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://finaid.lafayette.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  	<ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$5,673</li>
+							<li class="numbers">$2,828</li>
+							<li class="numbers">$25,422</li>
+						</ul>
+
+					  <h4 class="contact">Email: financialaid@lafayette.edu</h4>
+					</div>
+
+					<div class="college maine private">
+					  <p class="state">Maine</p>
+					  <h2 class="name">Colby College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,815</li>
+						<li class="numbers">5% </li>
+					    <li class="numbers">$57,300</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="https://www.colby.edu/admissions_cs/financial_aid/costs-and-financial-aid.cfm" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,604</li>
+							<li class="numbers">$1,110</li>
+							<li class="numbers">$26,138</li>
+					   </ul>
+					  <h4 class="contact">Email: finaid@colby.edu</h4>
+					</div>
+
+					<div class="college ohio private">
+					  <p class="state">Ohio</p>
+					  <h2 class="name">Oberlin College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,978</li>
+						<li class="numbers">7% </li>
+					    <li class="numbers">$59,683</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://new.oberlin.edu/office/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$5,128</li>
+							<li class="numbers">$759</li>
+							<li class="numbers">$19,781</li>
+					   </ul>
+
+					  <h4 class="contact">Email: financial.aid@oberlin.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Brandeis University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">5,828</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$59,050</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.brandeis.edu/sfs/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,649</li>
+							<li class="numbers">$2,628</li>
+							<li class="numbers">$25,293</li>
+					  </ul>
+
+					  <h4 class="contact">Email: sfs@brandeis.edu</h4>
+					</div>
+
+					
+					<div class="college illinois public">
+					  <p class="state">Illinois</p>
+					  <h2 class="name" style="font-size:1em;">University of Illinois,<br/> Urbana-Champaign</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">44,407</li>
+						<li class="numbers">7% </li>
+					    <li class="cost">$42,706</li>
+					  </ul>
+
+
+					  <h3 class="aid"><a href="http://www.osfa.illinois.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$4,805</li>
+							<li class="numbers">$6,488</li>
+							<li class="numbers">$4,966</li>
+					   </ul>
+
+					  <h4 class="contact">Email: finaid@illinois.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Barnard College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,438</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">$59,824</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://barnard.edu/finaid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,566</li>
+							<li class="numbers">$3,542</li>
+							<li class="numbers">$28,847</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@barnard.edu</h4>
+					</div>
+
+					<div class="college washington public">
+					  <p class="state">Washington</p>
+					  <h2 class="name">University of Washington</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">42,444</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$43,621</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="https://www.washington.edu/Poblaci&oacute;ns/osfa/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$4,950</li>
+							<li class="numbers">$5,067</li>
+							<li class="numbers">$6,107</li>
+						</ul>
+
+					  <h4 class="contact">Email: osfa@uw.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">New York University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">43,911</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers"> $61,407</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.nyu.edu/admissions/financial-aid-and-scholarships.html" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,357</li>
+							<li class="numbers">$3,629</li>
+							<li class="numbers">$14,986</li>
+					   </ul>
+
+					  <h4 class="contact">For their contact info, visit their <a href="http://www.nyu.edu/admissions/financial-aid-and-scholarships.html" target="_blank">website</a>.</h4>
+					</div>
+
+					<div class="college missouri private">
+					  <p class="state">Missouri</p>
+					  <h2 class="name" style="font-size:1em;">Washington University in Saint Louis</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">13,908</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$60,345</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="https://sfs.wustl.edu/pages/default.aspx" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers"> $4,692</li>
+							<li class="numbers">$3,405</li>
+							<li class="numbers">$23,129</li>
+					   </ul>
+
+					  <h4 class="contact">Email: financial@wustl.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Union College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,220</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$58,100</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="https://www.union.edu/admissions/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$6,136</li>
+							<li class="numbers">$3,394</li>
+							<li class="numbers">$20,689</li>
+					   </ul>
+					  <h4 class="contact">Email: finaid@union.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Smith College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">3,162</li>
+						<li class="makeup">8% </li>
+					    <li class="cost">$57,913</li>
+					</ul>
+
+
+					  <h3 class="aid"><a href="http://www.smith.edu/sfs/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,441</li>
+							<li class="numbers">$2,306</li>
+							<li class="numbers">$26,388</li>
+					  </ul>
+
+					  <h4 class="contact">Email: sfs@smith.edu</h4>
+					</div>
+
+					<div class="college north-carolina private">
+					  <p class="state">North Carolina</p>
+					  <h2 class="name">Wake Forest University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">7,351</li>
+						<li class="numbers">5% </li>
+					    <li class="numbers">$58,260</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.wfu.edu/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$7,603</li>
+							<li class="numbers">$2,385</li>
+							<li class="numbers">$21,848</li>
+					  </ul>
+
+					  <h4 class="contact">Email: financial-aid@wfu.edu</h4>
+					</div>
+
+					<div class="college virginia private">
+					  <p class="state">Virginia</p>
+					  <h2 class="name">University of Rochester</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">10,290</li>
+						<li class="numbers">5% </li>
+					    <li class="numbers">$59,156</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://enrollment.rochester.edu/financial/officeinfo.shtm" target="_blank">Ayuda Financiera</a></h3>
+
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,271</li>
+							<li class="numbers">$2,861</li>
+							<li class="numbers">$18,242</li>
+					  </ul>
+
+					  <h4 class="contact">To contact them, visit <a href="http://enrollment.rochester.edu/financial/officeinfo.shtm" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college washington private">
+					  <p class="state">Washington</p>
+					  <h2 class="name">Whitman College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,596</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$54,865</li>
+					  </ul>
+
+
+					  <h3 class="aid"><a href="https://www.whitman.edu/offices-and-services/financial-aid" target="_blank">Ayuda Financiera</a></h3>
+
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$5,807</li>
+						<li class="numbers">$6,628</li>
+						<li class="numbers">$18,401</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@whitman.edu</h4>
+					</div>
+
+					<div class="college california private">
+					  <p class="state">California</p>
+					  <h2 class="name">USC</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">38,010</li>
+						<li class="numbers">14% </li>
+					    <li class="numbers">$59,883</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.usc.edu/admission/fa/" target="_blank">Ayuda Financiera</a></h3>
+
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,095</li>
+							<li class="numbers">$9,618</li>
+							<li class="numbers">$23,458</li>
+					  </ul>
+
+					  <h4 class="contact">Contact form <a href="http://www.usc.edu/admission/fa/contact/contactus.html" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college iowa private">
+					  <p class="state">Iowa</p>
+					  <h2 class="name">Grinnell College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,693</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$53,318</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.grinnell.edu/offices/financialaid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,796</li>
+							<li class="numbers">$4,099</li>
+							<li class="numbers">$23,124</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@grinnell.edu</h4>
+					</div>
+
+					<div class="college oregon private">
+					  <p class="state">Oregon</p>
+					  <h2 class="name">Reed College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,474</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$57,770</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.reed.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,534</li>
+							<li class="numbers">$2,309</li>
+							<li class="numbers">$30,211</li>
+					  </ul>
+
+					  <h4 class="contact">Email: financial.eid@reed.edu</h4>
+					</div>
+
+					<div class="college texas public">
+					  <p class="state">Texas</p>
+					  <h2 class="name">UT Austin</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">51,112</li>
+						<li class="numbers">20% </li>
+					    <li class="numbers">$48,730</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://finaid.utexas.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,139</li>
+							<li class="numbers">$5,133</li>
+							<li class="numbers">$3,920</li>
+					  </ul>
+
+					  <h4 class="contact">Email: ask@finaid.utexas.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Cooper Union</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">988</li>
+						<li class="makeup">8% </li>
+					    <li class="cost">$53,895</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://cooper.edu/admissions/financial-aid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,214<li> 
+							<li class="numbers">$2,418</li>
+							<li class="numbers">$32,492</li>
+					  </ul>
+
+					  <h4 class="contact">Email: webmaster@cooper.edu</h4>
+					</div>
+
+					<div class="college wisconsin public">
+					  <p class="state">Wisconsin</p>
+					  <h2 class="name" style="font-size:1em;">University of Wisconsin, Madison</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">41,946</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$40,012</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.finaid.wisc.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$5,250</li>
+							<li class="numbers">$2,462</li>
+							<li class="numbers">$2,628</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@finaid.wisc.edu</h4>
+					</div>
+
+					<div class="college ohio private">
+					  <p class="state">Ohio</p>
+					  <h2 class="name">Kenyon College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">1,658</li>
+						<li class="makeup">5% </li>
+					    <li class="cost">$57,910</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.kenyon.edu/admissions-aid/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$2,201</li>
+							<li class="numbers">$1,299</li>
+							<li class="numbers">$20,199</li>
+					   </ul>
+					  <h4 class="contact">Email: finaid@kenyon.edu</h4>
+					</div>
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name">Lehigh University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">7,055</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$55,515</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.lehigh.edu/~infao/index.htm" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,029</li>
+							<li class="numbers">$2,848</li>
+							<li class="numbers">$23,747</l>
+					   </ul>
+
+					  <h4 class="contact">Email: financialaid@lehigh.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name" style="font-size:1em;">College of the Holy Cross</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,905</li>
+						<li class="numbers">10% </li>
+					    <li class="numbers">$56,730</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.lehigh.edu/~infao/index.htm" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$6,529</li>
+							<li class="numbers">$1,775</li>
+							<li class="numbers">$25,098</li>
+					   </ul>
+
+					  <h4 class="contact">Email: financialaid@holycross.edu</h4>
+					</div>
+
+					<div class="college california private">
+					  <p class="state">California</p>
+					  <h2 class="name">Santa Clara University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">8,800</li>
+						<li class="numbers">18% </li>
+				        <li class="numbers"> $57,681</li>
+				     </ul>
+
+					  <h3 class="aid"><a href="http://www.scu.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,059</li>
+							<li class="numbers">$9,281</li>
+							<li class="numbers">$13,732</li>
+					   </ul>
+					  <h4 class="contact">Email: OneStop@scu.edu</h4>
+					</div>
+
+					<div class="college maryland public">
+					  <p class="state">Maryland</p>
+					  <h2 class="name" style="font-size:1em;">University of Maryland, College Park</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="number">37,631</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$41,725</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.financialaid.umd.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,476</li>
+							<li class="numbers">$3,302</li>
+							<li class="numbers">$5,499</li>
+						</ul>
+					  <h4 class="contact">Email: umfinaid@umd.edu</h4>
+					</div>
+
+					<div class="college florida public">
+					  <p class="state">Florida</p>
+					  <h2 class="name">University of Florida</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">49,589</li>
+						<li class="numbers">17% </li>
+					    <li class="numbers">$42,290</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.sfa.ufl.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,719</li> 
+							<li class="numbers">$3,886</li>
+							<li class="numbers">$3,192</li>
+					   </ul>
+
+					  <h4 class="contact">Contact info <a href="http://www.sfa.ufl.edu/contact-sfa/" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college colorado private">
+					  <p class="state">Colorado</p>
+					  <h2 class="name">Colorado College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,043</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$42,290</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.coloradocollege.edu/admission/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,156</li>
+							<li class="numbers">$2,405</li>
+							<li class="numbers">$25,997</li>
+					  </ul>
+
+					  <h4 class="contact">Email: financialaid@coloradocollege.edu</h4>
+					</div>
+
+					<div class="college connecticut private">
+					  <p class="state">Connecticut</p>
+					  <h2 class="name">Trinity College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,393</li>
+						<li class="numbers">7% </li>
+					    <li class="numbers">$59,865</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.trincoll.edu/Admissions/finaid/Pages/default.aspx" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,323</li>
+							<li class="numbers">$5,479</li>
+							<li class="numbers">$31,980</li>
+					  </ul>
+					  <h4 class="contact">Email: financial-aid@trincoll.edu</h4>
+					</div>
+
+					<div class="college kentucky private">
+					  <p class="state">Kentucky</p>
+					  <h2 class="name">Centre College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,309</li>
+						<li class="numbers">3% </li>
+					    <li class="numbers">$46,400</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.centre.edu/financial_aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,373</li>
+							<li class="numbers">$3,733</li>
+							<li class="numbers">$14,992</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@centre.edu</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Mount Holyoke College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,362</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">$55,496</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="https://www.mtholyoke.edu/sfs" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,323</li>
+							<li class="numbers">$2,479</li>
+							<li class="numbers">$25,648</li>
+					   </ul>
+
+					  <h4 class="contact">Contact form <a href="https://www.mtholyoke.edu/contact/sfs" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college massachusetts private">
+					  <p class="state">Massachusetts</p>
+					  <h2 class="name">Boston University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">32,439</li>
+						<li class="makeup">8% </li>
+					    <li class="cost">$59,100</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.bu.edu/finaid/s" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,831</li>
+							<li class="numbers">$2,311</li>
+							<li class="numbers">$21,490</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@bu.edu</h4>
+					</div>
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name" style="font-size: 1em;">Franklin and Marshall College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,363</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$58,580</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.fandm.edu/financialaid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,323</li>
+							<li class="numbers">$2,583</li>
+							<li class="numbers">$20,764</li>
+					  </ul>
+					  <h4 class="contact">Email: financialaid@fandm.edu</h4>
+					</div>
+
+					<div class="college tennessee private">
+					  <p class="state">Tennessee</p>
+					  <h2 class="name" style="font-size: 1em;">Sewanee--University of the South</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,557</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$46,530</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://admission.sewanee.edu/finaid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,263</li>
+							<li class="numbers">$5,078</li>
+							<li class="numbers">$20,567</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@sewanee.edu</h4>
+					</div>
+
+					<div class="college indiana private">
+					  <p class="state">Indiana</p>
+					  <h2 class="name">DePauw University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,352</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$51,050</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.depauw.edu/admission/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,723</li>
+							<li class="numbers">$4,865</li>
+							<li class="numbers">$18,565</li>
+					  </ul>
+					  <h4 class="contact">Email: financialaid@depauw.edu</h4>
+					</div>
+
+					<div class="college california private">
+					  <p class="state">California</p>
+					  <h2 class="name">Scripps College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">985</li>
+						<li class="numbers">8% </li>
+					    <li class="numbers">$58,888</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.depauw.edu/admission/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,020</li>
+							<li class="numbers">$9,024</li>
+							<li class="numbers">$25,055</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@scrippscollege.edu</h4>
+					</div>
+
+					<div class="college illinois private">
+					  <p class="state">Illinois</p>
+					  <h2 class="name">Wheaton College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">3,069</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$41,496</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.wheaton.edu/admissions-and-aid/financial-aid" target="_blank">Ayuda Financiera</a></h3>
+
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,274</li>
+							<li class="numbers">$3,044</li>
+							<li class="numbers">$11,298</li>
+					   </ul>
+					  <h4 class="contact">Email: finaid@wheaton.edu</h4>
+					</div>
+
+					<div class="college california private">
+					  <p class="state">California</p>
+					  <h2 class="name">Pepperdine University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">7,539</li>
+						<li class="numbers">14% </li>
+					    <li class="numbers">$58,772</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.pepperdine.edu/admission/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,008</li>
+							<li class="numbers">$9,268</li>
+							<li class="numbers">$25,207</li>
+					  </ul>
+					</div>
+
+					<div class="college georgia private">
+					  <p class="state">Georgia</p>
+					  <h2 class="name">Emory University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">S7,441</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$42,980</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.emory.edu/FINANCIAL_AID/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,908</li>
+							<li class="numbers">$4,561</li>
+							<li class="numbers">$23,011</li>
+					   </ul>
+
+					  <h4 class="contact">.Contact info <a href="http://www.emory.edu/FINANCIAL_AID/contact-us.php" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name">Bucknell University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">3,554</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$45,378</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.bucknell.edu/FinancialAid.xml" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,837</li>
+							<li class="numbers">$2,836</li>
+							<li class="numbers">$23,815</li>
+					   </ul>
+
+					  <h4 class="contact">Email: finaid@bucknell.edu</h4>
+					</div>
+
+					<div class="college connecticut private">
+					  <p class="state">Connecticut</p>
+					  <h2 class="name">Connecticut College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,903</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$58,690</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.conncoll.edu/admission/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,147</li>  
+							<li class="numbers">$3,433</li>
+							<li class="numbers">$27,672</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@conncoll.edu</h4>
+					</div>
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name">Dickinson College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,397</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$58,229</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.dickinson.edu/Poblaci&oacute;n-life/resources/financial-aid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$12,643</li>
+							<li class="numbers">$2,722</li>
+							<li class="numbers">$22,671</li>
+					   </ul>
+					  <h4 class="contact">Email: finaid@dickinson.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name" style="font-size: 1em;">Hobart and William Smith Colleges</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul classes="line2">
+						<li class="numbers">2,242</li>
+						<li class="numbers">5% </li>
+					    <li class="numbers">$57,699</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.hws.edu/offices/finaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,237</li>
+							<li class="numbers">$2,702</li>
+							<li class="numbers">$19,979</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@hws.edu</h4>
+					</div>
+
+					<div class="college michigan private">
+					  <p class="state">Michigan</p>
+					  <h2 class="name">Kalamazoo College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,375</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$48,547</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="https://reason.kzoo.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$7,113</li>
+							<li class="numbers">$2,018</li>
+							<li class="numbers">$13,642</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@kzoo.edu</h4>
+					</div>
+
+					<div class="college minnesota private">
+					  <p class="state">Minnesota</p>
+					  <h2 class="name">Saint Olaf College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">3,179</li>
+						<li class="makeup">2% </li>
+					    <li class="cost">$50,550</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://wp.stolaf.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,663</li>
+							<li class="numbers">$3,463</li>
+							<li class="numbers">$17,642</li>
+					   </ul>
+					  <h4 class="contact">Email: finaid@stolaf.edu</h4>
+					</div>
+
+					<div class="college texas public">
+					  <p class="state">Texas</p>
+					  <h2 class="name" style="font-size: 1em;">Texas A&M University, College Station</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">50,230</li>
+						<li class="numbers">16% </li>
+					    <li class="numbers">$37,441</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="https://financialaid.tamu.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$4,639</li>
+							<li class="numbers">$4,978</li>
+							<li class="numbers">$5,407</li>
+						</ul>
+					  <h4 class="contact">Email: financialaid@tamu.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Syracuse University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">20,829</li>
+						<li class="numbers">9% </li>
+					    <li class="numbers">$55,600</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://syr.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,683</li>
+							<li class="numbers">$3,018</li>
+							<li class="numbers">$19,880</li>
+					  </ul>
+					  <h4 class="contact">Contact form <a href="http://syr.edu/financialaid/contact_us/index.html" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college louisiana private">
+					  <p class="state">Louisiana</p>
+					  <h2 class="name">Tulane University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+					  <ul class="line2">
+						<li class="numbers">12,845</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$59,000</li>
+					 </ul>
+					  <h3 class="aid"><a href="http://tulane.edu/financialaid/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$7,326</li>
+							<li class="numbers">$3,447</li>
+							<li class="numbers">$23,877</li>
+					   </ul>
+					  <h4 class="contact">Email: finaid@tulane.edu</h4>
+					</div>
+
+					<div class="college ohio private">
+					  <p class="state">Ohio</p>
+					  <h2 class="name">Denison University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,288</li>
+						<li class="numbers">6% </li>
+					    <li class="numbers">$54,490</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://denison.edu/admissions" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$4,527</li>
+							<li class="numbers">$1,156</li>
+							<li class="numbers">$19,705</li>
+						</ul>
+					  <h4 class="contact">Email: finadi@denison.edu</h4>
+					</div>
+
+					<div class="college ohio private">
+					  <p class="state">Ohio</p>
+					  <h2 class="name">College of Wooster</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">2,008</li>
+						<li class="numbers">3% </li>
+					    <li class="numbers">$51,300</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.wooster.edu/Admissions-and-Financial-Aid/Financial-Aid" target="_blank">Ayuda Financiera</a></h3>
+
+					   <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$5,875</li> 
+							<li class="numbers">$1,099</li>
+							<li class="numbers">$19,584</li>
+						</ul>
+					  <h4 class="contact">Email: financialaid@wooster.edu</h4>
+					</div>
+
+					<div class="college new-york private">
+					  <p class="state">New York</p>
+					  <h2 class="name">Bard College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">2,305</li>
+						<li class="numbers">2% </li>
+					    <li class="numbers">$60,280</li>
+					  </ul>	
+					  <h3 class="aid"><a href="http://www.wooster.edu/Admissions-and-Financial-Aid/Financial-Aid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+						<li class="numbers">$4,195</li>
+						<li class="numbers">$2,535</li>
+						<li class="numbers">$25,767</li>
+					  </ul>
+
+					  <h4 class="contact">Email: finaid@bard.edu</h4>
+					</div>
+
+					<div class="college wisconsin private">
+					  <p class="state">Wisconsin</p>
+					  <h2 class="name">Lawrence University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">1,487</li>
+						<li class="numbers">4% </li>
+					    <li class="numbers">$50,570</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.lawrence.edu/info/offices/financial-aid" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,810</li> 
+							<li class="numbers">$2,694</li>
+							<li class="numbers">$15,709</li>
+					   </ul>
+
+					  <h4 class="contact">Email: financial.aid@lawrence.edu</h4>
+					</div>
+
+					<!--added after US News list published-->
+
+					<div class="college california public">
+					  <p class="state">California</p>
+					  <h2 class="name">UC Davis</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">31,732</li>
+						<li class="numbers">16% </li>
+					    <li class="numbers">$55,046</li>
+					  </ul>
+					  <h3 class="aid"><a href="http://financialaid.ucdavis.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$5,273</li>  
+							<li class="numbers">$8,708</li>
+							<li class="numbers">$7,238</li>
+					   </ul>
+					  <h4 class="contact">Contact form <a href="https://financialaid.ucdavis.edu/ContactUs/" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college california public">
+					  <p class="state">California</p>
+					  <h2 class="name">UC Santa Barbara</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">21,685</li>
+						<li class="numbers">24% </li>
+					    <li class="numbers">$54,945</li>
+					  </ul>
+					  <h3 class="aid"><a href="http://www.finaid.ucsb.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					   <ul class="line4">
+							<li class="numbers">$5,529</li>
+							<li class="numbers">$7,368</li>
+							<li class="numbers">$8,043</li>
+					   </ul>
+
+					  <h4 class="contact">Contact info <a href="http://www.finaid.ucsb.edu/ContactInformation.aspx" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college california public">
+					  <p class="state">California</p>
+					  <h2 class="name">UC Irvine</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">21,685</li>
+						<li class="numbers">24% </li>
+					    <li class="numbers">$54,945</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.ofas.uci.edu/content/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,529</li>
+							<li class="numbers">$7,368</li>
+							<li class="numbers">$8,043</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@uci.edu</h4>
+					</div>
+
+					<div class="college florida private">
+					  <p class="state">Florida</p>
+					  <h2 class="name">University of Miami</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">16,068</li>
+						<li class="makeup">24% </li>
+					    <li class="cost">$58,782</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.ofas.uci.edu/content/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,830</li>
+							<li class="numbers">$6,091</li>
+							<li class="numbers">$23,667</li>
+					   </ul>
+					  <h4 class="contact">Email: ofas@miami.edu</h4>
+					</div>
+
+					<div class="college georgia private">
+					  <p class="state">Georgia</p>
+					  <h2 class="name">Agnes Scott College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">871</li>
+						<li class="numbers">7% </li>
+					    <li class="numbers">$45,691</li>
+					 </ul>
+
+					  <h3 class="aid"><a href="http://www.agnesscott.edu/admission/financial-aid/index.html" target="_blank">Ayuda Financiera</a></h3>
+					  	<ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+						<ul class="line4">
+							<li class="numbers">$5,603</li> 
+							<li class="numbers">$4,094</li>
+							<li class="numbers">$19,389</li>
+						</ul>
+					  <h4 class="contact">Email: finaid@agnesscott.edu</h4>
+					</div>
+
+					<div class="college pennsylvania private">
+					  <p class="state">Pennsylvania</p>
+					  <h2 class="name" style="font-size: 1em;">University of Pennsylvania--<br/>University Park</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="numbers">45,628</li>
+						<li class="numbers">5% </li>
+					    <li class="numbers">$44,156</li>
+					 </ul>
+					  <h3 class="aid"><a href="http://Poblaci&oacute;naid.psu.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,997</li>
+							<li class="numbers">$2,700</li>
+							<li class="numbers">$6,234</li>
+					  </ul>
+					  <h4 class="contact">Contact form <a href="http://Poblaci&oacute;naid.psu.edu/contact-info/email-contact-us#send-us-an-email" target="_blank">here</a>.</h4>
+					</div>
+
+					<div class="college ohio private">
+					  <p class="state">Ohio</p>
+					  <h2 class="name" style="font-size: 1em;">Case Western Reserve University</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">9,636</li>
+						<li class="makeup">3% </li>
+					    <li class="cost">$56,026</li>
+					  </ul>
+					  <h3 class="aid"><a href="http://financialaid.case.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$6,191</li>
+							<li class="numbers">$1,509</li>
+							<li class="numbers">$23,163</li>
+					  </ul>
+					  <h4 class="contact">Email: financialaid@case.edu</h4>
+					</div>
+
+					<div class="college georgia public">
+					  <p class="state">Ohio</p>
+					  <h2 class="name" style="font-size: 1em;">Georgia Institute of Technology</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">20,941</li>
+						<li class="makeup">6% </li>
+					    <li class="cost">$41,558</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.finaid.gatech.edu/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$5,668</li>
+							<li class="numbers">$9,222</li>
+							<li class="numbers">$5,995</li>
+					   </ul>
+					  <h4 class="contact">Email: finaid@gatech.edu</h4>
+					</div>
+
+					<div class="college maine private">
+					  <p class="state">Maine</p>
+					  <h2 class="name">Bates College</h2>
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2">
+						<li class="weight">20,941</li>
+						<li class="makeup">6% </li>
+					    <li class="cost">$41,558</li>
+					  </ul>
+					  <h3 class="aid"><a href="http://www.bates.edu/financial-services/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,886</li>
+							<li class="numbers">$645</li>
+							<li class="numbers">$5,926</li>
+					  </ul>
+					  <h4 class="contact">Email: finaid@bates.edu</h4>
+					</div>
+
+					<div class="college california private">
+					  <p class="state">California</p>
+					  <h2 class="name" id="claremont"><a href="http://www.claremont.edu/" target="_blank">Claremont Colleges</a></h2>
+					  <h2 class="schools" style="font-size:.8em; margin-left: 25px;"><a href="http://pomona.edu/administration/financial-aid/" target="_blank">Pomona College</a>, <a href="http://www.scrippscollege.edu/financial-aid/index.php" taget="_blank">Scripps College</a>, <a href="http://newwww.hmc.edu/admission/" target="_blank">Harvey Mudd College</a>, <a href="http://www.claremontmckenna.edu/finanaid/" target="_blank">Claremont McKenna</a></h2>
+
+					  <ul class="line1">
+							<li class="weight">Poblaci&oacute;n <br/> estudiantil</li>
+							<li class="makeup">% Hispano</li>
+					  		<li class="cost">Costo por a&ntilde;o</li>
+					  </ul>
+
+					  <ul class="line2" style="margin-bottom: 18px;">
+						<li class="weight" style="margin-right:10px;">784 to 1,301</li>
+						<li class="makeup" style="margin-right:10px;">8% to 16% </li>
+					    <li class="cost" style="margin-right:0px;">$44,0to $60,613</li>
+					  </ul>
+
+					  <h3 class="aid"><a href="http://www.bates.edu/financial-services/" target="_blank">Ayuda Financiera</a></h3>
+					  <ul class="line3">
+							<li class="federal">Federal</li>
+							<li class="local">Estatal</li> 
+							<li class="school">De la universidad</li>
+						</ul>
+
+					  <ul class="line4">
+							<li class="numbers">$4,886</li>
+							<li class="numbers">$645</li>
+							<li class="numbers">$5,926</li>
+					  </ul>
+					  <h4 class="contact"></h4>
+					</div>
+
+
+				  </div> <!-- #container -->
+
+				</section> <!-- #options -->
+
+			</div><!--end of undergrad section div-->
+			<!--end of Chapter_1-->
+
+		</div> <!--end of ayuda-->
+
+		</body>
+
+		<script>
+		$(function(){
+		  
+		  var $container = $('#container');
+
+		  $container.isotope({
+			itemSelector : '.college'
+		  });
+		  
+		  
+		  var $optionSets = $('#options .option-set'),
+			  $optionLinks = $optionSets.find('a');
+			  //$map = $('#map').usmap ({clickState})
+
+		  $optionLinks.click(function(){
+			var $this = $(this);
+			// don't proceed if already selected
+			if ( $this.hasClass('selected') ) {
+			  return false;
+			}
+			var $optionSet = $this.parents('.option-set');
+			$optionSet.find('.selected').removeClass('selected');
+			$this.addClass('selected');
+	  
+			// make option object dynamically, i.e. { filter: '.my-filter-class' }
+			var options = {},
+				key = $optionSet.attr('data-option-key'),
+				value = $this.attr('data-option-value');
+			// parse 'false' as false boolean
+			value = value === 'false' ? false : value;
+			options[ key ] = value;
+			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+			  // changes in layout modes need extra logic
+			  changeLayoutMode( $this, options )
+			} else {
+			  // otherwise, apply new options
+			  $container.isotope( options );
+			}
+			
+			return false;
+		  });
+
+		  
+		});
+
+		</script>
+</html>
